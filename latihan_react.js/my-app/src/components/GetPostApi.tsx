@@ -13,7 +13,7 @@ function GetPostApi() {
     const [error, setError] = useState<string | null>(null)
 
     useEffect(() => {
-        axios.get("https://jsonplaceholder.typicode.com/postss")
+        axios.get("https://jsonplaceholder.typicode.com/posts")
         .then(res => setPost(res.data))
         .catch(err => setError(err.message))
         .finally(() => setLoading(false))
